@@ -56,12 +56,12 @@ void DoExplosion(CBlob@ this)
 	this.set_f32("map_damage_radius", 256.0f * modifier);
 	
 	this.set_Vec2f("explosion_offset", Vec2f(0, 0));
-	Explode(this, 192.0f * modifier, 192.0f * (1.00f - modifier));
+	Explode(this, 174.0f * modifier, 174.0f * (1.00f - modifier));
 	
 	for (int i = 0; i < 2; i++)
 	{
 		this.set_Vec2f("explosion_offset", Vec2f((100 - XORRandom(200)) / 50.0f, (100 - XORRandom(200)) / 400.0f) * 128 * modifier);
-		Explode(this, 128.0f * modifier, 64.0f * (1 - modifier));
+		Explode(this, 74.0f * modifier, 42.0f * (1 - modifier));
 	}
 	
 	if (isServer())
@@ -80,9 +80,11 @@ void DoExplosion(CBlob@ this)
 		
 		if (!this.hasTag("no fallout") && XORRandom(100) < 75 * (invModifier * invModifier))
 		{
+			for(int i = 0; i < 2; i++)
+			{
 			CBlob@ blob = server_CreateBlob("falloutgas", this.getTeamNum(), this.getPosition());
-			// blob.setVelocity(Vec2f(30 - XORRandom(120), -10 - XORRandom(20)) * (0.5f + modifier));
 			blob.setPosition(this.getPosition() + Vec2f(128 - XORRandom(256), 50 - XORRandom(100)) * (0.75f + modifier));
+			}
 		}
 		
 		if (!this.hasTag("no flash"))
