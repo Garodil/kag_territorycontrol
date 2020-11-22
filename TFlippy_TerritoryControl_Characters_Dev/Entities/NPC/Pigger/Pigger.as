@@ -193,14 +193,14 @@ void onTick(CBlob@ this)
 		this.set_u16("succ netid", 0);
 	}
 		
-	if (isServer())
-	{
-		if (XORRandom(500) == 0)
-		{
-			CBlob@ blob = server_CreateBlob("mat_mithril", this.getTeamNum(), this.getPosition());
-			blob.server_SetQuantity(2 + XORRandom(10));
-		}
-	}
+//	if (isServer())
+//	{
+//		if (XORRandom(500) == 0)
+//		{
+//			CBlob@ blob = server_CreateBlob("mat_mithril", this.getTeamNum(), this.getPosition());
+//			blob.server_SetQuantity(2 + XORRandom(10));
+//		}
+//	}
 }
 
 f32 onHit(CBlob@ this, Vec2f worldPoint, Vec2f velocity, f32 damage, CBlob@ hitterBlob, u8 customData)

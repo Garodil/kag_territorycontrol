@@ -98,23 +98,23 @@ void DoExplosion(CBlob@ this)
 	
 	if (isServer())
 	{
-		for (int i = 0; i < 24; i++)
-		{
-			int amount = 25;
-			while(amount < 250)
-			{
-				amount += 25 + XORRandom(80);
-				i++;
-				if(i > 23)
-				{
-					break;
-				}
-			}
-			if(amount > 250) amount = 250;
-			CBlob@ blob = server_CreateBlob("mat_mithril", this.getTeamNum(), this.getPosition());
-			blob.server_SetQuantity(amount);
-			blob.setVelocity(Vec2f(4 - XORRandom(8), -2 - XORRandom(5)) * (0.5f));
-		}
+		//for (int i = 0; i < 24; i++)
+		//{
+		//	int amount = 25;
+		//	while(amount < 250)
+		//	{
+		//		amount += 25 + XORRandom(80);
+		//		i++;
+		//		if(i > 23)
+		//		{
+		//			break;
+		//		}
+		//	}
+		//	if(amount > 250) amount = 250;
+		//	CBlob@ blob = server_CreateBlob("mat_mithril", this.getTeamNum(), this.getPosition());
+		//	blob.server_SetQuantity(amount);
+		//	blob.setVelocity(Vec2f(4 - XORRandom(8), -2 - XORRandom(5)) * (0.5f));
+		//}
 		
 		for (int i = 0; i < 256; i++)
 		{

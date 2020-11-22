@@ -130,6 +130,7 @@ void onTick(CBlob@ this)
 				boom.set_u8("boom_start", 1);
 				boom.set_u8("boom_end", 25);
 				boom.Init();
+				boom.Tag("no mithril");
 				
 				this.server_Die();
 				this.Tag("dead");

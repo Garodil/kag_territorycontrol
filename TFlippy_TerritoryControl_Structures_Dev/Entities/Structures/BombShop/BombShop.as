@@ -127,14 +127,16 @@ void onInit(CBlob@ this)
 	}
 	{
 		ShopItem@ s = addShopItem(this, "Dirty Bomb (1)", "$icon_dirtybomb$", "mat_dirtybomb-1", "Scatters toxic mithril dust upon detonation.");
-		AddRequirement(s.requirements, "coin", "", "Coins", 500);
-		AddRequirement(s.requirements, "blob", "mat_mithril", "Mithril", 200);
+		AddRequirement(s.requirements, "coin", "", "Coins", 700);
+		AddRequirement(s.requirements, "blob", "mat_mithril", "Mithril", 150);
+		AddRequirement(s.requirements, "blob", "mat_mithrilenriched", "Enriched Mithril", 5);
+		AddRequirement(s.requirements, "blob", "mat_mithrilingot", "Mithril Ingot", 2);
 
 		s.spawnNothing = true;
 	}
 	{
 		ShopItem@ s = addShopItem(this, "L.O.L. Warhead (1)", "$icon_mininuke$", "mat_mininuke-1", "A miniature nuclear warhead. Can be used as L.O.L. Warhead Launcher ammunition. Detonates upon impact.");
-		AddRequirement(s.requirements, "coin", "", "Coins", 350);
+		AddRequirement(s.requirements, "coin", "", "Coins", 400);
 		AddRequirement(s.requirements, "blob", "mat_mithrilingot", "Mithril Ingot", 4);
 		AddRequirement(s.requirements, "blob", "mat_mithrilenriched", "Enriched Mithril", 10);
 

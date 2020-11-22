@@ -114,16 +114,16 @@ void onTick(CBlob@ this)
 		}
 	}
 	
-	if (isServer())
-	{
-		if (XORRandom(100) == 0)
-		{
-			CBlob@ blob = server_CreateBlob("mat_mithril", this.getTeamNum(), this.getPosition());
-			blob.server_SetQuantity(10 + XORRandom(20));
-		
-			this.server_Hit(this, this.getPosition(), Vec2f(), 0.125f, Hitters::stab, true);
-		}
-	}
+//	if (isServer())
+//	{
+//		if (XORRandom(100) == 0)
+//		{
+//			CBlob@ blob = server_CreateBlob("mat_mithril", this.getTeamNum(), this.getPosition());
+//			blob.server_SetQuantity(10 + XORRandom(20));
+//		
+//			this.server_Hit(this, this.getPosition(), Vec2f(), 0.125f, Hitters::stab, true);
+//		}
+//	}
 	
 	if (XORRandom(8) == 0) 
 	{	
@@ -197,16 +197,16 @@ void onDie(CBlob@ this)
 	
 	if (!isServer()) return;
 
-	for (int i = 0; i < 8; i++)
-	{
-		CBlob@ blob = server_CreateBlob("mat_mithril", this.getTeamNum(), this.getPosition());
-		
-		if (blob !is null)
-		{
-			blob.server_SetQuantity(10 + XORRandom(40));
-			blob.setVelocity(Vec2f(XORRandom(4) - 2, -2 - XORRandom(4)));
-		}
-	}
+//	for (int i = 0; i < 8; i++)
+//	{
+//		CBlob@ blob = server_CreateBlob("mat_mithril", this.getTeamNum(), this.getPosition());
+//		
+//		if (blob !is null)
+//		{
+//			blob.server_SetQuantity(10 + XORRandom(40));
+//			blob.setVelocity(Vec2f(XORRandom(4) - 2, -2 - XORRandom(4)));
+//		}
+//	}
 
 	// if (isServer())
 	// {

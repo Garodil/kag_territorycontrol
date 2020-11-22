@@ -85,16 +85,16 @@ void onTick(CBlob@ this)
 		}
 	}
 	
-	if (isServer())
-	{
-		if (XORRandom(100) == 0)
-		{
-			CBlob@ blob = server_CreateBlob("mat_mithril", this.getTeamNum(), this.getPosition());
-			blob.server_SetQuantity(5 + XORRandom(10));
-			
-			this.server_Hit(this, this.getPosition(), Vec2f(), 0.25f, Hitters::stab, true);
-		}
-	}
+//	if (isServer())
+//	{
+//		if (XORRandom(100) == 0)
+//		{
+//			CBlob@ blob = server_CreateBlob("mat_mithril", this.getTeamNum(), this.getPosition());
+//			blob.server_SetQuantity(5 + XORRandom(10));
+//			
+//			this.server_Hit(this, this.getPosition(), Vec2f(), 0.25f, Hitters::stab, true);
+//		}
+//	}
 	
 	if (XORRandom(10) == 0) 
 	{
@@ -220,18 +220,18 @@ void onDie(CBlob@ this)
 	
 	Explode(this, 32.0f, 8.0f);
 	
-	if (isServer())
-	{
-		for (int i = 0; i < 6; i++)
-		{
-			CBlob@ blob = server_CreateBlob("mat_mithril", this.getTeamNum(), this.getPosition());
-			if (blob !is null)
-			{
-				blob.server_SetQuantity(10 + XORRandom(35));
-				blob.setVelocity(Vec2f(4 - XORRandom(2), -2 - XORRandom(4)));
-			}
-		}
-	}
+//	if (isServer())
+//	{
+//		for (int i = 0; i < 6; i++)
+//		{
+//			CBlob@ blob = server_CreateBlob("mat_mithril", this.getTeamNum(), this.getPosition());
+//			if (blob !is null)
+//			{
+//				blob.server_SetQuantity(10 + XORRandom(35));
+//				blob.setVelocity(Vec2f(4 - XORRandom(2), -2 - XORRandom(4)));
+//			}
+//		}
+//	}
 }
 
 f32 onHit(CBlob@ this, Vec2f worldPoint, Vec2f velocity, f32 damage, CBlob@ hitterBlob, u8 customData)

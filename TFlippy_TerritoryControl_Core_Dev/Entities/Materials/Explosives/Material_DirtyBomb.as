@@ -120,17 +120,17 @@ void DoExplosion(CBlob@ this)
 	
 		for (int i = 0; i < 5; i++)
 		{
-			CBlob@ blob = server_CreateBlob("mat_mithril", -1, this.getPosition());
-			blob.setVelocity(getRandomVelocity(angle, 4 + XORRandom(15), 60));
-			blob.server_SetQuantity(XORRandom(75));
+		//	CBlob@ blob = server_CreateBlob("mat_mithril", -1, this.getPosition());
+		//	blob.setVelocity(getRandomVelocity(angle, 4 + XORRandom(15), 60));
+		//	blob.server_SetQuantity(XORRandom(75));
 			
 			CBlob@ gas = server_CreateBlob("falloutgas", -1, this.getPosition());
 			gas.setVelocity(getRandomVelocity(angle, 8 + XORRandom(10), 70));
-			gas.server_SetTimeToDie(180 + XORRandom(900));
+			gas.server_SetTimeToDie(70 + XORRandom(420));
 		}
 		
 		CBlob@ gas = server_CreateBlob("falloutgas", -1, this.getPosition());
-		gas.server_SetTimeToDie(180 + XORRandom(900));
+		gas.server_SetTimeToDie(70 + XORRandom(420));
 	}
 		
 	this.getSprite().Gib();

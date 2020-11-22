@@ -5,21 +5,22 @@ void onInit(CBlob@ this)
 {
 	this.Tag("smoke");
 	this.Tag("gas");
+	this.Tag("heavy weight");
 
 	// this.Tag("blocks spawn");
 	
 	this.getShape().SetGravityScale(0.05f);
 
-	this.getSprite().SetZ(10.0f);
+	this.getSprite().SetZ(13.0f);
 
 	this.SetMapEdgeFlags(CBlob::map_collide_sides);
 	this.getCurrentScript().tickFrequency = 5;
 
 	this.getSprite().RotateBy(90 * XORRandom(4), Vec2f());
 
-	if (!this.exists("toxicity")) this.set_f32("toxicity", 5.00f);
+	if (!this.exists("toxicity")) this.set_f32("toxicity", 7.00f);
 	
-	this.server_SetTimeToDie((30 * 60 * 5) + XORRandom(30 * 60 * 15));
+	this.server_SetTimeToDie((10 * 20 * 2) + XORRandom(10 * 20 * 3));
 	
 	if (isClient())
 	{
@@ -38,7 +39,7 @@ void onTick(CBlob@ this)
 	{
 		if (XORRandom(100) < 20) 
 		{
-			f32 radius = 128;
+			f32 radius = 160;
 			
 			CMap@ map = getMap();
 			Vec2f pos = this.getPosition() + getRandomVelocity(0, XORRandom(radius), 360);
@@ -60,7 +61,7 @@ void onTick(CBlob@ this)
 					CBlob@ blob = blobsInRadius[i];
 					if ((blob.hasTag("flesh") || blob.hasTag("nature")) && !blob.hasTag("dead"))
 					{
-						this.server_Hit(blob, blob.getPosition(), Vec2f(0, 0), 0.0625f, HittersTC::radiation, true);
+						this.server_Hit(blob, blob.getPosition(), Vec2f(0, 0), 0.125f, HittersTC::radiation, true);
 					}
 				}
 			}

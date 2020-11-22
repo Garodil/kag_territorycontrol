@@ -35,7 +35,7 @@ void onDie(CBlob@ this)
 		boom.set_u8("boom_end", 5);
 		boom.set_f32("mithril_amount", 50);
 		boom.set_f32("flash_distance", 256);
-		// boom.Tag("no mithril");
+		boom.Tag("no mithril");
 		// boom.Tag("no flash");
 		boom.Init();
 	}
