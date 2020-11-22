@@ -7,11 +7,11 @@ void onInit(CBlob@ this)
 		this,
 		false,				//If true, gun will be fully automatic and players will be able to just hold the fire button
 		"rpggrenade",		//Projectile to fire
-		15.0f,				//Projectile speed
-		15,					//Weapon fire delay, in ticks
+		7.0f,				//Projectile speed
+		27,					//Weapon fire delay, in ticks
 		4,					//Weapon clip size
 		1.00f,				//Ammo usage factor, completely ignore for now
-		50,					//Weapon reload time
+		70,					//Weapon reload time
 		false,				//If true, gun will be reloaded like a shotgun
 		0,					//For shotguns: Additional delay to reload end
 		"mat_grenade",	//Ammo item blob name
