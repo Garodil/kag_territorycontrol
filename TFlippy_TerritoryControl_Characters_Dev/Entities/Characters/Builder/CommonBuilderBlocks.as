@@ -452,15 +452,15 @@ void addCommonBuilderBlocks(BuildBlock[][]@ blocks)
 		b.size.Set(40, 24);
 		blocks[2].push_back(b);
 	}
-	{
-		BuildBlock b(0, "drillrig", "$icon_drillrig$", "Driller Mole\nAn automatic drilling machine that mines resources underneath.");
-		AddRequirement(b.reqs, "blob", "drill", "Drill", 1);
-		AddRequirement(b.reqs, "blob", "mat_wood", "Wood", 100);
-		AddRequirement(b.reqs, "blob", "mat_ironingot", "Iron Ingot", 2);
-		b.buildOnGround = true;
-		b.size.Set(24, 24);
-		blocks[2].push_back(b);
-	}
+	//{
+	//	BuildBlock b(0, "drillrig", "$icon_drillrig$", "Driller Mole\nAn automatic drilling machine that mines resources underneath.");
+	//	AddRequirement(b.reqs, "blob", "drill", "Drill", 1);
+	//	AddRequirement(b.reqs, "blob", "mat_wood", "Wood", 100);
+	//	AddRequirement(b.reqs, "blob", "mat_ironingot", "Iron Ingot", 2);
+	//	b.buildOnGround = true;
+	//	b.size.Set(24, 24);
+	//	blocks[2].push_back(b);
+	//}
 	{
 		BuildBlock b(0, "hopper", "$icon_hopper$", "Hopper\nPicks up items lying on the ground.");
 		AddRequirement(b.reqs, "blob", "mat_stone", "Stone", 20);

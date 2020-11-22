@@ -33,13 +33,13 @@ void onInit(CBlob@ this)
 	this.set_string("shop description", "Mechanist's Workshop");
 	this.set_u8("shop icon", 15);
 
-	{
-		ShopItem@ s = addShopItem(this, "Drill", "$drill$", "drill", descriptions[43], false);
-		AddRequirement(s.requirements, "blob", "mat_ironingot", "Iron Ingot", 2);
-		AddRequirement(s.requirements, "coin", "", "Coins", 25);
-
-		s.spawnNothing = true;
-	}
+	//{
+	//	ShopItem@ s = addShopItem(this, "Drill", "$drill$", "drill", descriptions[43], false);
+	//	AddRequirement(s.requirements, "blob", "mat_ironingot", "Iron Ingot", 2);
+	//	AddRequirement(s.requirements, "coin", "", "Coins", 25);
+    //
+	//	s.spawnNothing = true;
+	//}
 	{
 		ShopItem@ s = addShopItem(this, "Gramophone", "$gramophone$", "gramophone", "A device used to play music from Gramophone Records purchased at the Merchant.");
 		AddRequirement(s.requirements, "blob", "mat_wood", "Wood", 80);
@@ -58,14 +58,14 @@ void onInit(CBlob@ this)
 
 		s.spawnNothing = true;
 	}
-	{
-		ShopItem@ s = addShopItem(this, "Giga Drill Breaker", "$powerdrill$", "powerdrill", "A huge overpowered drill with a durable mithril head.");
-		AddRequirement(s.requirements, "blob", "mat_wood", "Wood", 50);
-		AddRequirement(s.requirements, "blob", "mat_mithrilingot", "Mithril Ingot", 2);
-		AddRequirement(s.requirements, "blob", "mat_copperwire", "Copper Wire", 2);
-
-		s.spawnNothing = true;
-	}
+	//{
+	//	ShopItem@ s = addShopItem(this, "Giga Drill Breaker", "$powerdrill$", "powerdrill", "A huge overpowered drill with a durable mithril head.");
+	//	AddRequirement(s.requirements, "blob", "mat_wood", "Wood", 50);
+	//	AddRequirement(s.requirements, "blob", "mat_mithrilingot", "Mithril Ingot", 2);
+	//	AddRequirement(s.requirements, "blob", "mat_copperwire", "Copper Wire", 2);
+    //
+	//	s.spawnNothing = true;
+	//}
 	{
 		ShopItem@ s = addShopItem(this, "Clown's Funny Klaxon", "$icon_klaxon$", "klaxon", "An infernal device housing thousands of lamenting souls.");
 		AddRequirement(s.requirements, "blob", "mat_goldingot", "Gold Ingot", 2);
@@ -235,6 +235,10 @@ void onInit(CBlob@ this)
 	{
 		ShopItem@ s = addShopItem(this, "Hazmat Suit", "$icon_hazmat$", "hazmatitem", "A hazardous materials suit giving the wearer protection against fire, toxic gases, radiation and drowning.");
 		AddRequirement(s.requirements, "blob", "mat_mithril", "Mithril", 50);
+		AddRequirement(s.requirements, "blob", "mat_mithrilingot", "Mithril Ingot", 1);
+		AddRequirement(s.requirements, "blob", "mat_goldingot", "Gold Ingot", 1);
+		AddRequirement(s.requirements, "blob", "mat_copperingot", "Copper Ingot", 1);
+		AddRequirement(s.requirements, "blob", "mat_steelingot", "Steel Ingot", 1);
 		AddRequirement(s.requirements, "coin", "", "Coins", 500);
 
 		s.spawnNothing = true;

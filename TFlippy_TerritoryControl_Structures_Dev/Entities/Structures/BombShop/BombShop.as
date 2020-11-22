@@ -208,19 +208,19 @@ void onInit(CBlob@ this)
 
 		s.spawnNothing = true;
 	}
-	{
-		ShopItem@ s = addShopItem(this, "Dynamite (1)", "$icon_dynamite$", "mat_dynamite-1", "A bundle of dynamite sticks. Good for mining, as it yields resources.");
-		AddRequirement(s.requirements, "coin", "", "Coins", 75);
-		AddRequirement(s.requirements, "blob", "mat_sulphur", "Sulphur", 25);
-
-		s.spawnNothing = true;
-	}
-	{
-		ShopItem@ s = addShopItem(this, "Fragmentation Grenade (1)", "$icon_fraggrenade$", "mat_fraggrenade-1", "A small hand grenade. Especially useful against infantry.");
-		AddRequirement(s.requirements, "coin", "", "Coins", 75);
-
-		s.spawnNothing = true;
-	}
+	//{
+	//	ShopItem@ s = addShopItem(this, "Dynamite (1)", "$icon_dynamite$", "mat_dynamite-1", "A bundle of dynamite sticks. Good for mining, as it yields resources.");
+	//	AddRequirement(s.requirements, "coin", "", "Coins", 75);
+	//	AddRequirement(s.requirements, "blob", "mat_sulphur", "Sulphur", 25);
+    //
+	//	s.spawnNothing = true;
+	//}
+	//{
+	//	ShopItem@ s = addShopItem(this, "Fragmentation Grenade (1)", "$icon_fraggrenade$", "mat_fraggrenade-1", "A small hand grenade. Especially useful against infantry.");
+	//	AddRequirement(s.requirements, "coin", "", "Coins", 75);
+    //
+	//	s.spawnNothing = true;
+	//}
 	{
 		ShopItem@ s = addShopItem(this, "Flash Grenade (1)", "$icon_flashgrenade$", "mat_flashgrenade-1", "A flash grenade used to temporarily blind your enemies.");
 		AddRequirement(s.requirements, "coin", "", "Coins", 100);

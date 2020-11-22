@@ -137,7 +137,7 @@ void onCollision(CBlob@ this, CBlob@ blob, bool solid, Vec2f normal, Vec2f point
 
 string[] cog_names = {
 	"klaxon",
-	"drill",
+	//"drill",
 	"gasextractor",
 	"minimine",
 	"scubagear",
