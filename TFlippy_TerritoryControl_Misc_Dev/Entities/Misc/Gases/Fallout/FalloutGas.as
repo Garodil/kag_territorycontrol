@@ -5,7 +5,7 @@ void onInit(CBlob@ this)
 {
 	this.SetLight(true);
 	this.SetLightRadius(74.0f);
-	this.SetLightColor(SColor(255, 25, 255, 100));
+	this.SetLightColor(SColor(255, 25, 255, 142));
 	
 	this.Tag("smoke");
 	this.Tag("gas");
