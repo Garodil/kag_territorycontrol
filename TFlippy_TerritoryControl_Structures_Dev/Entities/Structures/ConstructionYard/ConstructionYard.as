@@ -21,6 +21,7 @@ void onInit(CBlob@ this)
 	AddIconToken("$vehicleshop_upgradebolts$", "BallistaBolt.png", Vec2f(32, 8), 1);
 
 	AddIconToken("$icon_steamtank$", "Icon_SteamTank.png", Vec2f(48, 28), 0);
+	AddIconToken("$icon_heavysteamtank$", "Icon_HeavySteamTank.png", Vec2f(32, 64), 0);
 	AddIconToken("$icon_bomber$", "Icon_Bomber.png", Vec2f(64, 64), 0);
 	AddIconToken("$icon_armoredbomber$", "Icon_ArmoredBomber.png", Vec2f(64, 64), 0);
 	AddIconToken("$icon_triplane$", "Icon_Triplane.png", Vec2f(64, 32), 0);
@@ -82,6 +83,16 @@ void onInit(CBlob@ this)
 		AddRequirement(s.requirements, "blob", "mat_ironingot", "Iron Ingot", 10);
 		AddRequirement(s.requirements, "blob", "mat_wood", "Wood", 100);
 		AddRequirement(s.requirements, "coin", "", "Coins", 125);
+		s.crate_icon = 7;
+		s.customButton = true;
+		s.buttonwidth = 2;
+		s.buttonheight = 2;
+	}
+	{
+		ShopItem@ s = addShopItem(this, "Heavy Steam Tank", "$icon_heavysteamtank$", "heavysteamtank", "$icon_heavysteamtank$\n\n\n" + "An armored land vehicle. Comes with a powerful cannon and a durable ram.", false, true);
+		//AddRequirement(s.requirements, "blob", "mat_ironingot", "Iron Ingot", 10);
+		//AddRequirement(s.requirements, "blob", "mat_wood", "Wood", 100);
+		AddRequirement(s.requirements, "coin", "", "Coins", 5);
 		s.crate_icon = 7;
 		s.customButton = true;
 		s.buttonwidth = 2;
