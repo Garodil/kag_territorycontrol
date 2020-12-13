@@ -1,6 +1,7 @@
 #include "Survival_Structs.as";
 #include "Hitters.as";
 #include "Logging.as";
+#include "neutral_team_assigner.as"
 
 #include "uncap_team.as"
 
@@ -689,7 +690,15 @@ void onCommand(CBlob@ this, u8 cmd, CBitStream@ inParams)
 						if (isServer())
 						{
 							ply.server_setTeamNum(100 + XORRandom(100));
-							if (ply.getBlob() !is null) ply.getBlob().server_Die();
+							CBlob@ blob = ply.getBlob();
+							
+							//if (blob.getName() != "builder") { return; }
+							CBlob@ tempo = server_CreateBlob("peasant", 100 + XORRandom(100), blob.getPosition());
+							if (tempo is null) { return; } // we tried :(
+				
+							tempo.server_SetPlayer(ply);
+							blob.server_Die();
+							//if (ply.getBlob() !is null) ply.getBlob().server_Die();
 						}
 						
 						if (isClient())
