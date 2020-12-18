@@ -692,9 +692,9 @@ void onCommand(CBlob@ this, u8 cmd, CBitStream@ inParams)
 							ply.server_setTeamNum(100 + XORRandom(100));
 							CBlob@ blob = ply.getBlob();
 							
-							//if (blob.getName() != "builder") { return; }
+							if (blob.getName() != "builder") { return; }
 							CBlob@ tempo = server_CreateBlob("peasant", 100 + XORRandom(100), blob.getPosition());
-							if (tempo is null) { return; } // we tried :(
+							if (tempo is null) { return; } // we tried :( yep that code was taken from uncap_team.as
 				
 							tempo.server_SetPlayer(ply);
 							blob.server_Die();
