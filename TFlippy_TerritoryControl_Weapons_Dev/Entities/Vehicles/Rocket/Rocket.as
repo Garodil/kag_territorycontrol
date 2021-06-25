@@ -50,6 +50,16 @@ void onTick(CBlob@ this)
 				if (!holder.isFacingLeft()) mouseAngle += 180;
 
 				this.setAngleDegrees(-this.getVelocity().Angle() + 90);
+				
+				CControls@ holderC = holder.getControls();
+				if (this.get_u32("no_explosion_timer") < getGameTime() && this.get_u32("fuel_timer") - 7 > getGameTime())
+				{
+					holderC.setButtonsLock(true);
+				}
+				else
+				{
+					holderC.setButtonsLock(false);
+				}
 			}
 
 			dir = Vec2f_lerp(this.get_Vec2f("direction"), dir, 0.05f);
